@@ -1,0 +1,21 @@
+
+<div class="widget widget_recent_entries">
+  <h3 class="widget-title">
+    <span>پست های اخیر</span>
+  </h3>
+
+  <ul>
+    {% for latest in latest_single %}
+    <li>
+      <a href="#">
+        <img src="{{latest.image.url}}" alt="image" />
+      </a>
+
+      <h5><a href="{% url 'blog:single' pk=latest.id %}">{{latest.title}}</a></h5>
+      <p class="date">{{ latest.jalali_published_date }}</p>
+    </li>
+    {% empty %}
+    <li>هیچ پستی برای نمایش وجود ندارد.</li>
+    {% endfor %}
+  </ul>
+</div>

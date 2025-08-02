@@ -1,0 +1,81 @@
+﻿{% extends "base.html" %}
+{% load shop_tags %}
+{% load static %}
+{% block content %}
+
+        <!-- Start Page Title Area -->
+        <section class="page-title-area">
+            <div class="container">
+                <h1>وبلاگ جداگانه</h1>
+                <ul>
+                    <li><a href="{% url 'website:index' %}"><i class="flaticon-grid"></i> صفحه اصلی</a></li>
+                    <li>وبلاگ جداگانه</li>
+                </ul>
+            </div>
+        </section>
+        <!-- End Page Title Area -->
+
+        <!-- Start Blog Details Area -->
+		<section class="blog-details-area ptb-100">
+			<div class="container">
+				<div class="row">
+                    <div class="col-lg-8 col-md-12">
+                        <div class="blog-details">
+                            <div class="article-img">
+                                <img src="{{posts.image.url}}" alt="blog-details">
+                                <div class="date">{{ posts.jalali_published_date.month|month_name }}
+                                </div>
+                            </div>
+                            
+                            <div class="article-content">
+                                <ul class="category">
+                                    <li><a href="#">{{posts.category.name}}</a></li>
+                                </ul>
+                                    
+                                <h3>{{posts.title}}</h3>                                
+                                <p>{{posts.content|safe}}</p>
+                                                               
+                                <blockquote class="blockquote">
+                                    <p>{{posts.content_b|safe}}</p>
+                                </blockquote>                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="sidebar">
+{% show_latest_single %}
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</section>
+		<!-- End Blog Details Area -->
+
+        <!-- Start Subscribe Area -->
+        <section class="subscribe-area">
+            <div class="container">
+                <div class="row h-100 align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="subscribe-content">
+                            <div class="icon">
+                                <i class="flaticon-send"></i>
+                            </div>
+                            <h5>دریافت آخرین اخبار از شرکت ما!</h5>
+                            <span>ما اطلاعات شخصی شما را با هیچ کس به اشتراک نمی گذاریم.</span>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <form class="newsletter-form" data-toggle="validator">
+                            <input type="email" class="form-control" placeholder="آدرس ایمیل خود را وارد کنید." name="EMAIL" required autocomplete="off">
+
+                            <button type="submit" class="btn btn-primary">اشتراک در خبرنامه</button>
+                            <div id="validator-newsletter" class="form-result"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Subscribe Area -->
+
+{% endblock content %}

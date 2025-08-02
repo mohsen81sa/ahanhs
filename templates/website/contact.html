@@ -1,0 +1,129 @@
+﻿{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+        <!-- Start Page Title Area -->
+        <section class="page-title-area">
+            <div class="container">
+                <h1>تماس با ما</h1>
+                <ul>
+                    <li><a href="{% url 'website:index' %}"><i class="flaticon-grid"></i> صفحه اصلی</a></li>
+                    <li>تماس با ما</li>
+                </ul>
+            </div>
+        </section>
+        <!-- End Page Title Area -->
+
+        <!-- End Contact Area -->
+        <section class="contact-area ptb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contact-box">
+                            <div class="icon">
+                                <i class="flaticon-phone"></i>
+                            </div>
+                            
+                            <div class="content">
+                                <h4>تلفن / فکس</h4>
+                                {% for phone in posts %}
+                                <p><a id='phone' href="tel:{{ profile.phone }}">{{phone.phone.as_e164}}</a></p>
+                                <p><a href="tel:{{ profile.phonee }}">{{phone.phonee.as_e164}}</a></p>
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="contact-box">
+                            <div class="icon">
+                                <i class="flaticon-mail"></i>
+                            </div>
+                            
+                            <div class="content">
+                                
+                                <h4>پست الکترونیکی</h4>
+                                {% for email in posts %}
+
+                                <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to={{ email.email }}">{{email.email}} </a></p>
+                                <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to={{ email.emaill }}">{{email.emaill}}</a></p>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3">
+                        <div class="contact-box">
+                            <div class="icon">
+                                <i class="flaticon-world"></i>
+                            </div>
+                            
+                            <div class="content">
+                                <h4>آدرس</h4>
+                                {% for address in posts %}
+                                <p>{{address.address}}</p>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row h-100 align-items-center contact-form">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="leave-your-message">
+							<div class="stay-connected">
+								<h3>در تماس باشید</h3>
+								<ul>
+									<li>
+										<a href="https://linkmix.co/35080774">
+											<i class="flaticon-add"></i>
+											
+											<span>اشتراک ها</span>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<i class="flaticon-instagram"></i>
+											
+											<span>اینستاگرام</span>
+										</a>
+									</li>
+									
+								</ul>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Contact Area -->
+        
+        <!-- Start Subscribe Area -->
+        <section class="subscribe-area">
+            <div class="container">
+                <div class="row h-100 align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="subscribe-content">
+                            <div class="icon">
+                                <i class="flaticon-send"></i>
+                            </div>
+                            <h5>دریافت آخرین اخبار از شرکت ما!</h5>
+                            <span>ما اطلاعات شخصی شما را با هیچ کس به اشتراک نمی گذاریم.</span>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <form class="newsletter-form" data-toggle="validator">
+                            <input type="email" class="form-control" placeholder="آدرس ایمیل خود را وارد کنید." name="EMAIL" required autocomplete="off">
+
+                            <button type="submit" class="btn btn-primary">اشتراک در خبرنامه</button>
+                            <div id="validator-newsletter" class="form-result"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Subscribe Area -->
+{% endblock content %}        

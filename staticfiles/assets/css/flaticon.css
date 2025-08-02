@@ -1,0 +1,101 @@
+/*
+Flaticon icon font: Flaticon
+Creation date: 27/03/2019 05:25
+*/
+
+@font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/Flaticon.eot");
+    src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Flaticon.woff2") format("woff2"),
+    url("../fonts/Flaticon.woff") format("woff"),
+    url("../fonts/Flaticon.ttf") format("truetype"),
+    url("../fonts/Flaticon.svg#Flaticon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: "Flaticon";
+        src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+    }
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+    font-family: Flaticon;
+    font-size: 15px;
+    font-style: normal;
+}
+
+.flaticon-right:before { content: "\f100"; }
+.flaticon-edit:before { content: "\f101"; }
+.flaticon-search:before { content: "\f102"; }
+.flaticon-supermarket:before { content: "\f103"; }
+.flaticon-time:before { content: "\f104"; }
+.flaticon-phone:before { content: "\f105"; }
+.flaticon-mail:before { content: "\f106"; }
+.flaticon-facebook:before { content: "\f107"; }
+.flaticon-twitter:before { content: "\f108"; }
+.flaticon-linkedin:before { content: "\f109"; }
+.flaticon-skype:before { content: "\f10a"; }
+.flaticon-instagram:before { content: "\f10b"; }
+.flaticon-car-parts:before { content: "\f10c"; }
+.flaticon-star:before { content: "\f10d"; }
+.flaticon-right-arrow:before { content: "\f10e"; }
+.flaticon-facebook-1:before { content: "\f10f"; }
+.flaticon-twitter-1:before { content: "\f110"; }
+.flaticon-linkedin-1:before { content: "\f111"; }
+.flaticon-instagram-1:before { content: "\f112"; }
+.flaticon-photo:before { content: "\f113"; }
+.flaticon-chain:before { content: "\f114"; }
+.flaticon-photo-1:before { content: "\f115"; }
+.flaticon-repair:before { content: "\f116"; }
+.flaticon-truck:before { content: "\f117"; }
+.flaticon-deal:before { content: "\f118"; }
+.flaticon-robot:before { content: "\f119"; }
+.flaticon-motor:before { content: "\f11a"; }
+.flaticon-blueprint:before { content: "\f11b"; }
+.flaticon-tank:before { content: "\f11c"; }
+.flaticon-tractor:before { content: "\f11d"; }
+.flaticon-system:before { content: "\f11e"; }
+.flaticon-motor-1:before { content: "\f11f"; }
+.flaticon-bridge:before { content: "\f120"; }
+.flaticon-sports-and-competition:before { content: "\f121"; }
+.flaticon-factory:before { content: "\f122"; }
+.flaticon-mail-1:before { content: "\f123"; }
+.flaticon-note:before { content: "\f124"; }
+.flaticon-contact:before { content: "\f125"; }
+.flaticon-question:before { content: "\f126"; }
+.flaticon-send:before { content: "\f127"; }
+.flaticon-circular:before { content: "\f128"; }
+.flaticon-worker:before { content: "\f129"; }
+.flaticon-worker-1:before { content: "\f12a"; }
+.flaticon-hammer:before { content: "\f12b"; }
+.flaticon-wrench:before { content: "\f12c"; }
+.flaticon-support:before { content: "\f12d"; }
+.flaticon-gear:before { content: "\f12e"; }
+.flaticon-parcel:before { content: "\f12f"; }
+.flaticon-architecture-and-city:before { content: "\f130"; }
+.flaticon-clock:before { content: "\f131"; }
+.flaticon-oil:before { content: "\f132"; }
+.flaticon-gear-1:before { content: "\f133"; }
+.flaticon-grid:before { content: "\f134"; }
+.flaticon-project:before { content: "\f135"; }
+.flaticon-builder:before { content: "\f136"; }
+.flaticon-world:before { content: "\f137"; }
+.flaticon-user:before { content: "\f138"; }
+.flaticon-user-1:before { content: "\f139"; }
+.flaticon-calendar:before { content: "\f13a"; }
+.flaticon-clock-1:before { content: "\f13b"; }
+.flaticon-quote:before { content: "\f13c"; }
+.flaticon-add:before { content: "\f13d"; }
+.flaticon-correct:before { content: "\f13e"; }
+.flaticon-correct-1:before { content: "\f13f"; }
+.flaticon-check:before { content: "\f140"; }
+.flaticon-check-1:before { content: "\f141"; }
+.flaticon-check-2:before { content: "\f142"; }
+.flaticon-back:before { content: "\f143"; }
+.flaticon-back-1:before { content: "\f144"; }
+.flaticon-minus:before { content: "\f145"; }
+.flaticon-chevron:before { content: "\f146"; }
+.flaticon-close:before { content: "\f147"; }

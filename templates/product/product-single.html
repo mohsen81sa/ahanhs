@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+        <!-- Start Page Title Area -->
+        <section class="page-title-area">
+            <div class="container">
+                <h1>محصولات</h1>
+                <ul>
+                    <li><a href="{% url 'website:index' %}"><i class="flaticon-grid"></i> صفحه اصلی</a></li>
+                    <li>محصولات</li>
+                </ul>
+            </div>
+        </section>
+        <!-- End Page Title Area -->
+
+        <!-- Start Project Details Area -->
+        <section class="project-details-area ptb-100">
+            <div class="container">
+                <div class="row h-100 align-items-center">
+                    <div class="col-lg-8 col-md-12">
+                        <div class="project-details-img">
+                            <img src="{{posts.image.url}}" alt="image">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-12">
+                        <div class="project-details-info">
+                            <ul>
+                                <li><Span>تاريخ:</Span> {{posts.jalali_published_date}}</li>
+                                <li>
+                                    <Span>به اشتراک بگذارید:</Span>
+                                    
+                                    <ul>
+                                        <li><a href="https://linkmix.co/35080774"><i class="flaticon-add"></i></a></li>
+                                        <li><a href="https://www.instagram.com/muhammad.heydarimehr/"><i class="flaticon-instagram"></i></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="project-details-desc">
+                            <h3>{{posts.title}}</h3>
+                            <blockquote class="blockquote">
+                                <p> {{posts.content}}</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Project Details Area -->
+
+
+{% endblock content %}

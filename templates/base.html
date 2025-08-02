@@ -1,0 +1,229 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="HTML5,CSS3,HTML,Template,Multi-Purpose,Industry Theme,Factory,Induxtro - Industry & Factory HTML Template" >
+        <meta name="description" content="Induxtro - Industry & Factory HTML Template">
+        <meta name="author" content="Barat Hadian">
+        <!-- Bootstrap Min CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+        <!-- Animate Min CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+        <!-- Flaticon CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+        <!-- Meanmenu CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/meanmenu.css' %}">
+        <!-- Owl Carousel Min CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+        <!-- Odometer CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/odometer.css' %}">
+        <!-- Magnific Popup Min CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.min.css' %}">
+		<!-- NiceSelect CSS -->
+		<link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
+		<!-- FontAwesome Min CSS -->
+		<link rel="stylesheet" href="{% static 'assets/css/fontawesome.min.css' %}">
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+        <!-- RTL CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/rtl.css' %}">
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+        <!-- Logo -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' %}">
+
+        <title>{% block title %}{% endblock title %}</title>
+
+        <link rel="icon" type="image/png" href="{% static 'assets/img/favicon.png' %}">
+    </head>
+
+    <body>
+        <!-- Start Preloader Area -->
+        <div class="preloader">
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+        </div>
+        <!-- End Preloader Area -->
+
+        <!-- Start Header Area -->
+        <header class="header header-style-one">
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 offset-lg-6 col-md-12 offset-md-0">
+                            <div class="header-info">
+                                <p><i class="flaticon-mail"></i> <a href="mailto:muhammad.heydarymehr@gmail.com">muhammad.heydarymehr@gmail.com</a></p>
+
+                                <ul>
+                                    <li><a href="https://linkmix.co/35080774"><i class="flaticon-add"></i></a></li>
+                                    <li><a href="https://t.me/muhammad_heydarimehr"><i class="fa-brands fa-telegram" style="font-size: 24px; color: white;"></i></a></li>
+                                    <li><a href="https://www.instagram.com/muhammad.heydarimehr/"><i class="flaticon-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-area">
+                <div class="induxtro-mobile-nav">
+                    <div class="logo">
+                        <a href="{% url 'website:index' %}"><img src="{% static 'assets/img/logo.png' %}" alt="logo"></a>
+                    </div>
+                </div>
+
+                <div class="induxtro-nav">
+                    <div class="container">
+                        <nav class="navbar navbar-expand-md navbar-light">
+                            <a class="navbar-brand" href="index.html"><img src="{% static 'assets/img/logo.png' %}" alt="logo"></a>
+
+                            <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item"><a href="{% url 'website:index' %}" class="nav-link">صفحه اصلی</a></li>
+                                        <li class="nav-item"><a href="{% url 'shop:product-grid' %}" class="nav-link">قیمت</a></li>
+                                    <li class="nav-item"><a href="{% url 'product:product' %}" class="nav-link">محصولات</a>
+                                    </li>
+                                        
+                                    <li class="nav-item"><a href="{% url 'blog:blog' %}" class="nav-link"> وبلاگ</a>
+                                    </li>
+
+                                    <li class="nav-item"><a href="{% url 'website:contact' %}" class="nav-link">تماس با ما</a></li>
+                                </ul>
+
+                                <div class="others-option">
+                                    <ul>
+                                        <li>
+                                            <span class="search-popup-icon"><i class="flaticon-search"></i></span>
+                                        </li>
+
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <div class="searchBoxTop">
+                        <div class="seachBoxContainer">
+                            <div class="container">
+                                <span class="searchClose"></span>
+
+                                <form action="{% url 'website:search' %}" method="GET">
+                                    <input class="form-control"  type="text" name="q" placeholder="جستجو در اینجا..." value="{{ search_query }}">
+                                    <button type="submit"><i class="flaticon-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End Header Area -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    {% block content %}{% endblock content %}
+
+    <!-- Start Footer Area -->
+    <footer class="footer-area ptb-100 pb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-footer-widget">
+                        <div class="logo">
+                            <a href="#">
+                                <img src="{% static 'assets/img/logo.png' %}" alt="logo">
+                            </a>
+                        </div>
+                        <p>رقابت در بازار آهن آلات نیازمند نوآوری و بهبود مستمر است.
+                            
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-footer-widget ml-3">
+                        <h3>شرکت ما</h3>
+
+                        <ul class="list">
+                            <li><a href="project.html">آخرین اخبار</a> </li>
+                            <li><a href="mailto:muhammad.heydarymehr@gmail.com">دریافت نقل و قول</a> </li>
+                            <li><a href="contact.html">تماس با ما</a> </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-footer-widget">
+                        <h3>تماس با ما</h3>
+
+                        <ul class="contact-info">
+                            <li><span>آدرس:</span>  تهران بازار آهن شادآباد - بلوار طاووس - خیابان ایمن (بلوک 9جنوبی )  -  پلاک 384</li>
+                            <li><span>پست الکترونیک:</span> <a href="mailto:muhammad.heydarymehr@gmail.com">muhammad.heydarymehr@gmail.com</a></li>
+                            <li><span>تلفن:</span> <a href="tel:09011909803">09011909803</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row h-100 align-items-center">
+                    <div class="col-lg-6 col-md-6">
+                        <p> <a href="" target="_blank">Barat Hadian</a></p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Area -->
+
+    <div class="go-top"><i class="flaticon-chevron"></i></div>
+
+    <!-- Jquery Min Js -->
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <!-- Popper Min JS -->
+    <script src="{% static 'assets/js/popper.min.js' %}"></script>
+    <!-- Bootstrap Min JS -->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <!-- Meanmenu Min JS -->
+    <script src="{% static 'assets/js/jquery.meanmenu.min.js' %}"></script>
+    <!-- Owl Carousel Min JS -->
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <!-- Appear Min JS -->
+    <script src="{% static 'assets/js/jquery.appear.js' %}"></script>
+    <!-- Odometer Min JS -->
+    <script src="{% static 'assets/js/odometer.min.js' %}"></script>
+    <!-- Magnific Popup Min JS -->
+    <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <!-- Mixitup min JS -->
+    <script src="{% static 'assets/js/mixitup.min.js' %}"></script>
+    <!-- NiceSelect Min Js -->
+    <script src="{% static 'assets/js/jquery.nice-select.min.js' %}"></script>
+    <!-- AjaxChimp JS -->
+    <script src="{% static 'assets/js/jquery.ajaxchimp.min.js' %}"></script>
+    <!-- Form Validator Min JS -->
+    <script src="{% static 'assets/js/form-validator.min.js' %}"></script>
+    <!-- Contact Form Min JS -->
+    <script src="{% static 'assets/js/contact-form-script.js' %}"></script>
+    <!-- Map API JS FILES -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApghCIIx9MpQhA768sKXxvR_Okg0SF2k4&callback=initMap"></script>
+    <!-- Induxtro Map JS -->
+    <script src="{% static 'assets/js/induxtro-map.js' %}"></script>
+    <!-- Main JS -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+
+    {% block extra_js %} {% endblock extra_js %}
+
+    {% block extra_js_no_compress %} {% endblock extra_js_no_compress %}
+
+</body>
+
+</html>
